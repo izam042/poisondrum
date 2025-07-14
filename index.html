@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poison Drum - Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="utility.css" />
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left flex border">
+            <div class="home">
+                <div class="logo">
+                    <img class="invert" src="logo.svg" alt="Logo">
+                    POISONDRUM
+                </div>
+                <div class="search-container">
+                    <img class="invert" src="search.svg" alt="search" />
+                    <input type="text" id="searchInput" placeholder="Search songs...">
+                </div>
+            </div>
+            <div class="list flex">
+                <ul></ul>
+            </div>
+        </div>
+        
+        <div class="right">
+            <div class="cardcontainer">
+                <h1>Spotify sucks Lorem ipsum dolor sit.</h1>
+                <div class="cards">
+                    <img src="download (1).jpeg" alt="Album 1" class="album-cover">
+                    <img src="download (2).jpeg" alt="Album 2" class="album-cover">
+                    <img src="download (3).jpeg" alt="Album 3" class="album-cover">
+                    <img src="download (4).jpeg" alt="Album 4" class="album-cover">
+                    <img src="download.jpeg" alt="Album 5" class="album-cover">
+                </div>
+            </div>
+            <div class="player">
+                <div class="songname">No song selected</div>
+                <div class="visualizer">
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                    <div class="visualizer-bar"></div>
+                </div>
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                    <div class="progress-handle" id="progressHandle"></div>
+                </div>
+                <div class="buttons">
+                    <img src="skip_previous_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Previous" class="control-btn">
+                    <img src="play_circle_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Play/Pause" class="control-btn">
+                    <img src="skip_next_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="Next" class="control-btn">
+                </div>
+                <div class="duration">00:00 / 00:00</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

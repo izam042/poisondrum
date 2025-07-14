@@ -1,0 +1,10 @@
+.res{display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.flex {display:flex}
+
+.invert{filter: invert(1);}
+
+.border{border: 2px solid white;}
