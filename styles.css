@@ -58,12 +58,22 @@ body {
   filter: brightness(2) drop-shadow(0 0 16px #fff) drop-shadow(0 0 24px #a020f0);
 }
 
-.search-container {
+.search-bar {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(58, 24, 80, 0.12);
-  padding: 12px 18px;
+  background: #2d0036;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #2d003655;
+  width: 100%;
+}
+
+.search-container {
+  flex-direction: column;
+  align-items: stretch;
+  background: rgba(58, 24, 80, 0.18);
+  padding: 16px 18px 10px 18px;
   border-radius: 10px;
   margin-bottom: 24px;
   box-shadow: 0 2px 8px #2d003633;
@@ -408,4 +418,16 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c7b6e5;
+  letter-spacing: 2px;
+  margin: 12px 0 0 0;
+  text-shadow: none;
+  filter: none;
+  text-align: center;
+  padding-top: 10px;
 }

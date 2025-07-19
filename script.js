@@ -11,31 +11,11 @@ function formatTime(seconds) {
     return `${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 }
 
-// Function to decode URL-encoded strings
-function decodeFileName(fileName) {
-    return decodeURIComponent(fileName).replace(/%20/g, ' ');
-}
-
-// Fetch songs from the server
+// Fetch songs from songs.json
 async function fetchSongs() {
     try {
-        const response = await fetch('/songs/');
-        const data = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(data, 'text/html');
-        const links = doc.querySelectorAll('a');
-        
-        songs = Array.from(links)
-            .map(link => link.href)
-            .filter(href => href.endsWith('.mp3'))
-            .map(href => {
-                const fileName = href.split('/').pop();
-                return {
-                    url: href,
-                    name: decodeFileName(fileName.replace('.mp3', ''))
-                };
-            });
-        
+        const response = await fetch('/songs.json');
+        songs = await response.json();
         displaySongs();
     } catch (error) {
         console.error('Error fetching songs:', error);
@@ -133,7 +113,6 @@ function initPlayer() {
     
     // Update duration and progress bar
     audio.addEventListener('timeupdate', () => {
-        
         const duration = document.querySelector('.duration');
         const currentTime = formatTime(audio.currentTime);
         const totalTime = formatTime(audio.duration);
